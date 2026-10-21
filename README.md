@@ -205,4 +205,4 @@ npm run build
 
 ## GitHub Pages
 
-GitHub Pages serves the committed static UI snapshot from `docs/` using the `main` branch and `/docs` folder. The application source (`src/`) is not present in this repository, so this bundle cannot be rebuilt here. A working attendance backend also requires valid Supabase credentials and database setup.
+GitHub Pages serves the committed static UI snapshot from the repository root using the existing `main` branch configuration. The application source (`src/`) is not present in this repository, so this bundle cannot be rebuilt here. A working attendance backend also requires valid Supabase credentials and database setup.
