@@ -5,7 +5,8 @@ import { fileURLToPath } from 'node:url';
 const repositoryRoot = dirname(fileURLToPath(import.meta.url));
 const distributionDirectory = resolve(repositoryRoot, 'QA', 'dist');
 const sourceAssets = resolve(distributionDirectory, 'assets');
-const outputAssets = resolve(repositoryRoot, 'assets');
+const pagesDirectory = resolve(repositoryRoot, 'docs');
+const outputAssets = resolve(pagesDirectory, 'assets');
 const basePath = '/mmyrv-project-A2/';
 
 const [html, assetFiles] = await Promise.all([
@@ -36,7 +37,7 @@ const deploymentBundle = appBundle.replace(
 await mkdir(outputAssets, { recursive: true });
 await cp(sourceAssets, outputAssets, { recursive: true });
 await writeFile(resolve(outputAssets, appBundleName), deploymentBundle);
-await writeFile(resolve(repositoryRoot, 'index.html'), deploymentHtml);
-await writeFile(resolve(repositoryRoot, '404.html'), deploymentHtml);
+await writeFile(resolve(pagesDirectory, 'index.html'), deploymentHtml);
+await writeFile(resolve(pagesDirectory, '404.html'), deploymentHtml);
 
-console.log('Prepared GitHub Pages files at the repository root.');
+console.log('Prepared GitHub Pages files in docs/.');

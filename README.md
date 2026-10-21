@@ -9,4 +9,4 @@ The app is published from the prebuilt bundle in `QA/dist`. To refresh the stati
 node prepare-pages.mjs
 ```
 
-Then commit and push the generated root `index.html`, `404.html`, and `assets/` directory. The application source (`QA/src`) is not present in this repository, so the checked-in bundle cannot be rebuilt here.
+Then commit and push the generated `docs/` directory. GitHub Pages should use the `main` branch and `/docs` folder. The application source (`QA/src`) is not present in this repository, so the checked-in bundle cannot be rebuilt here.
