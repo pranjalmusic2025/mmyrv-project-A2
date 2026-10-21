@@ -205,10 +205,4 @@ npm run build
 
 ## GitHub Pages
 
-The static site is prepared from the prebuilt bundle in `QA/dist`. To refresh it after replacing that bundle, run:
-
-```sh
-node prepare-pages.mjs
-```
-
-Commit and push the generated `docs/` directory. GitHub Pages should use the `main` branch and `/docs` folder. The application source (`QA/src`) is not present in this repository, so the bundle cannot be rebuilt here.
+GitHub Pages serves the committed static UI snapshot from `docs/` using the `main` branch and `/docs` folder. The application source (`src/`) is not present in this repository, so this bundle cannot be rebuilt here. A working attendance backend also requires valid Supabase credentials and database setup.
